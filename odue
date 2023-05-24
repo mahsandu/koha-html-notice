@@ -1,0 +1,23 @@
+Dear <<borrowers.firstname>> <<borrowers.surname>>,
+
+According to our current records, you have items that are overdue. Please return or renew them at the branch below as soon as possible to avoid more late fines.
+
+<<branches.branchname>>
+<<branches.branchaddress1>>
+<<branches.branchaddress2>> <<branches.branchaddress3>>
+Phone: <<branches.branchphone>>
+Fax: <<branches.branchfax>>
+
+You may renew online or Coming to Library each issued item one time.
+
+The following item(s) is/are currently overdue:
+
+<item>"<<biblio.title>>" by <<biblio.author>>, <<bibkio.copyrigtdate>>,<<items.itemcallnumber>>, Barcode: <<items.barcode>> Fine: <<items.fine>></item>
+
+For more information about library resources & services please contact us.
+
+Thank you,
+AUW Library Team
+<<branches.branchname>>
+<<branches.branchemail>>
+<<branches.branchurl>>

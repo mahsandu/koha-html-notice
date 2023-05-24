@@ -1,0 +1,15 @@
+<<borrowers.firstname>> 
+<<borrowers.surname>>,
+
+
+
+
+<item>"<<biblio.title>>" by <<biblio.author>>, <<bibkio.copyrigtdate>>,<<items.itemcallnumber>>, Barcode: <<items.barcode>> Fine: <<items.fine>></item>
+
+
+Thank you,
+<<branches.branchnotes>>
+<<branches.branchname>>
+<<branches.branchaddress1>>
+
+<<year>>, <<branches.branchnotes>>

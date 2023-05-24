@@ -1,0 +1,16 @@
+Dear <<borrowers.firstname>> <<borrowers.surname>>,
+
+The following items have been renewed:
+----
+<<biblio.title>><<items.content>><<biblio.author>>  . 
+
+
+
+For more information about library resources & services please contact us.
+
+Thank you,
+
+AUW Library Team
+<<branches.branchname>>
+<<branches.branchemail>>
+<<branches.branchurl>>

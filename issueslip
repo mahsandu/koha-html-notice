@@ -1,0 +1,36 @@
+<h3><<branches.branchname>></h3>
+Checked out to <<borrowers.title>> <<borrowers.firstname>> <<borrowers.initials>> <<borrowers.surname>> <br />
+(<<borrowers.cardnumber>>) <br />
+
+<<today>><br />
+
+<h4>Checked Out</h4>
+<checkedout>
+<p>
+<<biblio.title>> <br />
+Barcode: <<items.barcode>><br />
+Date due: <<issues.date_due>><br />
+</p>
+</checkedout>
+
+<h4>Overdues</h4>
+<overdue>
+<p>
+<<biblio.title>> <br />
+Barcode: <<items.barcode>><br />
+Date due: <<issues.date_due>><br />
+</p>
+</overdue>
+
+<hr>
+<h4>Online Renew Address</h4>
+http://opac.iub.edu.bd
+<h4 style="text-align: center; font-style:italic;">News</h4>
+<news>
+<div class="newsitem">
+<h5 style="margin-bottom: 1px; margin-top: 1px"><b><<additional_contents.title>></b></h5>
+<p style="margin-bottom: 1px; margin-top: 1px"><<additional_contents.content>></p>
+<p class="newsfooter" style="font-size: 8pt; font-style:italic; margin-bottom: 1px; margin-top: 1px">Posted on <<additional_contents.published_on>></p>
+<hr />
+</div>
+</news>
