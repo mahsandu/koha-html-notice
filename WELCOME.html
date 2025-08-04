@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to IUB Library!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Base styles - critical for email clients */
         body {
@@ -79,10 +78,12 @@
             max-width: calc(33.333% - 20px);
             box-sizing: border-box; /* Include padding/border in width calculation */
         }
-        .icon-item i {
-            font-size: 32px;
+        .icon-item span.icon {
+            font-size: 32px; /* Set size for Unicode icon */
             color: #812990; /* IUB Purple */
             margin-bottom: 8px;
+            display: block; /* Ensure the icon is on its own line */
+            line-height: 1; /* Adjust line height for icon */
         }
         .icon-item p {
             font-size: 13px;
@@ -106,6 +107,11 @@
             font-size: 15px;
             margin-top: 20px;
         }
+        .button span.icon { /* Icon within button */
+            font-size: 16px; /* Match button text size */
+            margin-right: 8px;
+            line-height: 1; /* Adjust line height for icon */
+        }
         .divider {
             border-bottom: 1px solid #eee;
             margin: 20px 0;
@@ -116,6 +122,11 @@
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 4px;
+        }
+        .info-block span.icon { /* Icon within info block */
+            font-size: 16px; /* Match text size */
+            margin-right: 8px;
+            line-height: 1; /* Adjust line height for icon */
         }
 
         /* Responsive adjustments */
@@ -150,7 +161,7 @@
             .header h1 {
                 font-size: 20px;
             }
-            .icon-item i {
+            .icon-item span.icon {
                 font-size: 28px;
             }
         }
@@ -163,43 +174,44 @@
         </div>
 
         <div class="content">
-            <p>Dear **[% borrower.title %] [% borrower.firstname %] [% borrower.surname %]**, </p>
+            <p>Dear <strong>[% borrower.title %] [% borrower.firstname %] [% borrower.surname %]</strong>,</p>
 
-            <p>We are thrilled to welcome you to the IUB Library community! Your new library account is now active.</p>
+            <p>Welcome to the IUB Library! Your library account is now active.</p>
 
             <div class="info-block">
-                <p><strong><i class="fas fa-id-card"></i> Your Membership ID:</strong> **[% borrower.cardnumber %]**</p>
-                <p><strong><i class="fas fa-calendar-alt"></i> Account Expiry Date:</strong> **[% borrower.dateexpiry | $KohaDates %]**</p>
+                <p><span class="icon">💳</span> <strong>Membership ID:</strong> <strong>[% borrower.cardnumber %]</strong></p>
+                <p><span class="icon">📅</span> <strong>Account Expiry Date:</strong> <strong>[% borrower.dateexpiry | $KohaDates %]</strong></p>
             </div>
 
-            <p>To ensure your account is fully set up, please send a **formal picture of yourself** from your **official IUB email address** to: **library@iub.edu.bd**.</p>
+            <p>With an active account, you can now <i>check out items</i>, and <i>utilize all library facilities, including reading rooms.</i></p>
+            <p>To ensure the account is fully set up, please send a <strong> formal picture</strong> from your <strong>official IUB email address</strong> to: <strong>library@iub.edu.bd</strong>.</p>
 
             <div class="divider"></div>
 
             <h3 style="text-align: center; color: #2e3192; margin-bottom: 25px;">Quick Access to Your Resources</h3>
             <div class="icon-section">
                 <div class="icon-item">
-                    <i class="fas fa-search"></i>
+                    <span class="icon">📚</span>
                     <p><a href="http://opac.iub.edu.bd">OPAC & Account</a></p>
                 </div>
                 <div class="icon-item">
-                    <i class="fas fa-laptop-house"></i>
+                    <span class="icon">💻</span>
                     <p><a href="http://iub.refread.com">e-Resources (Remote)</a></p>
                 </div>
                 <div class="icon-item">
-                    <i class="fas fa-book-reader"></i>
+                    <span class="icon">📖</span>
                     <p><a href="http://elibrary.iub.edu.bd">e-Resources (Direct)</a></p>
                 </div>
                 <div class="icon-item">
-                    <i class="fas fa-university"></i>
+                    <span class="icon">🎓</span>
                     <p><a href="http://ar.iub.edu.bd">Academic Repository</a></p>
                 </div>
                 <div class="icon-item">
-                    <i class="fas fa-globe"></i>
+                    <span class="icon">🌐</span>
                     <p><a href="http://library.iub.edu.bd">Library Website</a></p>
                 </div>
                 <div class="icon-item">
-                    <i class="fas fa-external-link-alt"></i>
+                    <span class="icon">🏢</span>
                     <p><a href="http://iub.ac.bd">University Website</a></p>
                 </div>
             </div>
@@ -207,15 +219,15 @@
             <div class="divider"></div>
 
             <h3 style="text-align: center; color: #2e3192; margin-bottom: 25px;">Library Hours</h3>
-            <p style="text-align: center; margin-bottom: 8px;">**Sunday - Wednesday:** 9:00 AM - 9:00 PM</p>
-            <p style="text-align: center; margin-bottom: 8px;">**Thursday:** 9:00 AM - 7:00 PM</p>
-            <p style="text-align: center;">**Friday & Saturday:** 10:00 AM - 6:00 PM</p>
+            <p style="text-align: center; margin-bottom: 8px;"><strong>Sunday - Wednesday:</strong> 9:00 AM - 9:00 PM</p>
+            <p style="text-align: center; margin-bottom: 8px;"><strong>Thursday:</strong> 9:00 AM - 7:00 PM</p>
+            <p style="text-align: center;"><strong>Friday & Saturday:</strong> 10:00 AM - 6:00 PM</p>
 
             <div class="divider"></div>
 
             <p style="text-align: center; margin-top: 30px;">For any questions, our team is here to assist you!</p>
             <p style="text-align: center;">
-                <a href="mailto:library@iub.edu.bd" class="button"><i class="fas fa-envelope"></i> Email Us</a>
+                <a href="mailto:library@iub.edu.bd" class="button"><span class="icon">✉️</span> Email Us</a>
             </p>
         </div>
 
